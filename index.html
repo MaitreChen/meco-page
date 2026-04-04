@@ -178,7 +178,50 @@
   }
   </script>
 </head>
-<body>
+<!-- <body> -->
+  <body class="has-navbar-fixed-top">
+
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="box-shadow: 0 2px 4px rgba(0,0,0,0.05); background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px);">
+  <div class="container is-max-desktop">
+    
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-bold is-size-4" style="font-family: 'Comic Sans MS', 'Comic Sans', cursive; background: linear-gradient(45deg, #3273dc, #9b51e0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px;" href="#">
+        MECO
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center; font-weight: 500;">
+
+        <a class="navbar-item" href="#">Home</a>
+
+        <a class="navbar-item" href="#abstract">Abstract</a>
+        <a class="navbar-item" href="#statistics">Statistics</a>
+        <a class="navbar-item" href="#dataset-tasks">Tasks</a>
+        <a class="navbar-item" href="#evaluation-protocols">Protocols</a>
+        <a class="navbar-item" href="#applications">Applications</a>
+        <!-- <a class="navbar-item" href="#citation">Citation</a> -->
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-dark is-rounded is-small" href="#data-access">
+              <span class="icon"><i class="fas fa-database"></i></span>
+              <span><strong>Get Data</strong></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</nav>
 
 
   <main id="main-content">
@@ -250,13 +293,12 @@
                   </a>
                 </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
-                  <a href="https://<DATASET URL>" target="_blank"
+                  <a href="#data-access" 
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                    <i class="fas fa-database"></i>
-                  </span>
+                      <i class="fas fa-database"></i>
+                    </span>
                     <span>Dataset</span>
                   </a>
                 </span>
@@ -286,7 +328,7 @@
 <!-- End teaser image -->
 
 <!-- Paper abstract -->
-<section class="section hero is-light">
+<section class="section hero is-light" id="abstract">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -302,6 +344,573 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+
+
+
+<!-- Dataset Statistics Cards -->
+
+
+<section class="section" id="statistics">
+  <div class="container is-max-desktop">
+    <div class="box">
+      <div class="columns is-mobile is-multiline is-centered has-text-centered">
+        
+        <div class="column is-6-mobile">
+          <p class="title is-2">42</p>
+          <p class="subtitle is-6">Elderly Participants</p>
+        </div>
+        
+        <div class="column is-6-mobile">
+          <p class="title is-2">38h</p>
+          <p class="subtitle is-6">Total Duration</p>
+        </div>
+        
+        <div class="column is-6-mobile">
+          <p class="title is-2">30,592</p>
+          <p class="subtitle is-6">Sync Samples</p>
+        </div>
+
+        <div class="column is-6-mobile">
+          <p class="title is-2">2</p>
+          <p class="subtitle is-6">Label Types<br>
+            <span class="is-size-7 has-text-grey">Emotion & Cognition</span>
+          </p>
+        </div>
+
+        <div class="column is-6-mobile">
+          <p class="title is-2">7</p>
+          <p class="subtitle is-6">Target Tasks<br>
+            <span class="is-size-7 has-text-grey">5 Emotion + 2 Cognition</span>
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="modalities" style="padding-top: 2rem; padding-bottom: 2rem;">
+  <div class="container is-max-desktop">
+    
+    <h2 class="title is-3 has-text-centered" style="color: #2c3e50; margin-bottom: 2.5rem;">MODALITIES</h2>
+    
+    <div class="columns is-mobile is-multiline is-centered">
+
+      <div class="column is-6-mobile is-3-tablet has-text-centered">
+        <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 50%; background-color: #eef3fc; color: #3273dc; margin-bottom: 0.8rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <i class="fas fa-video fa-2x"></i>
+        </div>
+        <h3 class="title is-5" style="color: #2c3e50; margin-bottom: 0.3rem;">Video</h3>
+        <span class="tag is-info is-light is-rounded" style="margin-bottom: 0.8rem; font-size: 0.7rem;">Non-intrusive</span>
+      </div>
+
+      <div class="column is-6-mobile is-3-tablet has-text-centered">
+        <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 50%; background-color: #f4ecf9; color: #9b51e0; margin-bottom: 0.8rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <i class="fas fa-microphone-alt fa-2x"></i>
+        </div>
+        <h3 class="title is-5" style="color: #2c3e50; margin-bottom: 0.3rem;">Audio</h3>
+        <span class="tag is-primary is-light is-rounded" style="margin-bottom: 0.8rem; font-size: 0.7rem; background-color: #f0e6fa; color: #8a4baf;">High-fidelity</span>
+      </div>
+
+      <div class="column is-6-mobile is-3-tablet has-text-centered">
+        <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 50%; background-color: #e6fbf7; color: #00d1b2; margin-bottom: 0.8rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <i class="fas fa-brain fa-2x"></i>
+        </div>
+        <h3 class="title is-5" style="color: #2c3e50; margin-bottom: 0.3rem;">EEG</h3>
+        <span class="tag is-success is-light is-rounded" style="margin-bottom: 0.8rem; font-size: 0.7rem;">2-Channel Wearable</span>
+      </div>
+
+      <div class="column is-6-mobile is-3-tablet has-text-centered">
+        <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 50%; background-color: #ffe8ec; color: #ff3860; margin-bottom: 0.8rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <i class="fas fa-heartbeat fa-2x"></i>
+        </div>
+        <h3 class="title is-5" style="color: #2c3e50; margin-bottom: 0.3rem;">ECG</h3>
+        <span class="tag is-danger is-light is-rounded" style="margin-bottom: 0.8rem; font-size: 0.7rem;">1-Channel Sensor</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- dataset-tasks -->
+
+
+<section class="section" id="dataset-tasks" style="background-color: #f8f9fa;">
+  <div class="container is-max-desktop">
+    
+    <h2 class="title is-3 has-text-centered" style="color: #2c3e50; margin-bottom: 1.5rem;">BASELINE TASKS</h2>
+    <div class="box has-text-centered" style="background-color: #e9ecef; border: none; box-shadow: none; margin-bottom: 3rem; border-radius: 8px;">
+      <p class="is-size-6" style="color: #4a5568; line-height: 1.8;">
+        MECO supports <span style="color: #e74c3c; font-size: 1.8em; font-weight: 900; margin: 0 6px; vertical-align: middle;">7</span> distinct downstream baseline tasks spanning emotion and cognition.<br>
+      </p>
+    </div>
+
+    <div class="is-flex is-align-items-center" style="margin-bottom: 0.5rem;">
+      <h3 class="title is-4" style="color: #2c3e50; margin-bottom: 0; margin-right: 15px;">Emotion Domain (5 Tasks)</h3>
+      <span class="tag is-info is-light">Objective &rarr; Subjective</span>
+      <span class="tag is-info is-light" style="margin-left: 8px;">Coarse-grained &rarr; Fine-grained</span>
+    </div>
+    <p class="is-size-6" style="color: #666; margin-bottom: 1.5rem; line-height: 1.5;">
+      <em><strong>Note:</strong> Task T1 evaluates <strong>objective</strong> stimulus-induced emotion. Tasks T2&ndash;T5 evaluate <strong>subjective</strong> emotional experiences assessed via the Self-Assessment Manikin (SAM), transitioning from coarse-grained sentiment classes to fine-grained emotion categories and continuous dimensional spaces.</em>
+    </p>
+
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <div class="box" style="height: 100%; border-left: 5px solid #3273dc; border-radius: 8px;">
+          <h4 class="title is-5" style="color: #2c3e50;">Task T1 (SR): Stimulus-induced Emotion Recognition</h4>
+          <div class="content is-size-6">
+            <ul>
+              <li><strong>Target:</strong> Predict objective stimulus-induced emotions based on intended stimuli.</li>
+              <li><strong>Output:</strong> Discrete labels <code>{0: 'angry', 1: 'boredom', 2: 'happy', 3: 'neutral', 4: 'sadness', 5: 'tension'}</code>.</li>
+              <li><strong>Metric:</strong> Unweighted Average Recall (UAR), Weighted Average Recall (WAR).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-6">
+        <div class="box" style="height: 100%; border-left: 5px solid #3273dc; border-radius: 8px;">
+          <h4 class="title is-5" style="color: #2c3e50;">Task T2 (SA): 3-class Sentiment Analysis</h4>
+          <div class="content is-size-6">
+            <ul>
+              <li><strong>Target:</strong> Predict coarse-grained subjective sentiment.</li>
+              <li><strong>Output:</strong> Discrete labels <code>{0: 'Negative', 1: 'Neutral', 2: 'Positive'}</code>.</li>
+              <li><strong>Metric:</strong> UAR, WAR.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-6">
+        <div class="box" style="height: 100%; border-left: 5px solid #3273dc; border-radius: 8px;">
+          <h4 class="title is-5" style="color: #2c3e50;">Task T3 (ER): 5-class Emotion Recognition</h4>
+          <div class="content is-size-6">
+            <ul>
+              <li><strong>Target:</strong> Predict fine-grained subjective emotion categories.</li>
+              <li><strong>Output:</strong> Discrete labels <code>{0: 'Angry', 1: 'Sadness', 2: 'Tension', 3: 'Neutral', 4: 'Happiness'}</code>.</li>
+              <li><strong>Metric:</strong> UAR, WAR.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-6">
+        <div class="box" style="height: 100%; border-left: 5px solid #00d1b2; border-radius: 8px;">
+          <h4 class="title is-5" style="color: #2c3e50;">Task T4 (VR): Valence Regression</h4>
+          <div class="content is-size-6">
+            <ul>
+              <li><strong>Target:</strong> Predict continuous subjective valence dimensional scores.</li>
+              <li><strong>Output:</strong> Continuous values in <code>[1, 9]</code> (spanning from negative to positive).</li>
+              <li><strong>Metric:</strong> Mean Absolute Error (MAE), Concordance Correlation Coefficient (CCC).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-6">
+        <div class="box" style="height: 100%; border-left: 5px solid #00d1b2; border-radius: 8px;">
+          <h4 class="title is-5" style="color: #2c3e50;">Task T5 (AR): Arousal Regression</h4>
+          <div class="content is-size-6">
+            <ul>
+              <li><strong>Target:</strong> Predict continuous subjective arousal dimensional scores.</li>
+              <li><strong>Output:</strong> Continuous values in <code>[1, 9]</code> (spanning from calm to excited).</li>
+              <li><strong>Metric:</strong> MAE, CCC.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="is-flex is-align-items-center" style="margin-top: 3rem; margin-bottom: 0.5rem;">
+      <h3 class="title is-4" style="color: #2c3e50; margin-bottom: 0; margin-right: 15px;">Cognition Domain (2 Tasks)</h3>
+      <span class="tag is-warning is-light">Coarse Screening &rarr; Fine-grained Scoring</span>
+    </div>
+    <p class="is-size-6" style="color: #666; margin-bottom: 1.5rem; line-height: 1.5;">
+      <em><strong>Note:</strong> Cognition tasks progress from coarse-grained binary screening for cognitive impairment (T6) to fine-grained regression of specific cognitive scores (T7).</em>
+    </p>
+
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <div class="box" style="height: 100%; border-left: 5px solid #ffdd57; border-radius: 8px;">
+          <h4 class="title is-5" style="color: #2c3e50;">Task T6 (CR): Binary Cognitive Impairment Screening</h4>
+          <div class="content is-size-6">
+            <ul>
+              <li><strong>Target:</strong> Predict coarse-grained cognitive state for Mild Cognitive Impairment (MCI) screening.</li>
+              <li><strong>Output:</strong> Binary labels <code>{0: 'HC', 1: 'MCI'}</code>.</li>
+              <li><strong>Metric:</strong> Accuracy (ACC), Macro-F1.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-6">
+        <div class="box" style="height: 100%; border-left: 5px solid #ffdd57; border-radius: 8px;">
+          <h4 class="title is-5" style="color: #2c3e50;">Task T7 (MR): MMSE Score Regression</h4>
+          <div class="content is-size-6">
+            <ul>
+              <li><strong>Target:</strong> Predict fine-grained Mini-Mental State Examination (MMSE) scores.</li>
+              <li><strong>Output:</strong> Values in <code>[0, 30]</code> (evaluated as a continuous regression task, though underlying target values are inherently discrete integers).</li>
+              <li><strong>Metric:</strong> MAE, CCC.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- evaluation-protocols -->
+
+<section class="section" id="evaluation-protocols">
+  <div class="container is-max-desktop">
+    
+    <h2 class="title is-3 has-text-centered" style="color: #2c3e50; margin-bottom: 2.5rem;">EVALUATION PROTOCOLS</h2>
+
+
+<div class="is-flex is-flex-direction-row is-justify-content-center is-align-items-center" style="margin-bottom: 3.5rem; margin-top: 1rem;">
+      
+      <div class="has-text-centered" style="width: 160px;">
+        <span class="icon is-large" style="color: #3e8ed0; margin-bottom: 0.5rem;"><i class="fas fa-user-check fa-2x"></i></span>
+        <p class="has-text-weight-bold is-size-5" style="color: #3e8ed0;">Personalization</p>
+        <p class="is-size-7 has-text-grey">Subject-Dependent</p>
+      </div>
+
+      <div class="is-hidden-mobile" style="flex-grow: 1; max-width: 350px; margin: 0 20px; position: relative;">
+        <p class="is-size-7 has-text-centered has-text-grey has-text-weight-semibold" style="margin-bottom: 8px; letter-spacing: 1px;">EVALUATION SPECTRUM COVERAGE</p>
+        <div style="height: 6px; background: linear-gradient(90deg, #3e8ed0 0%, #9953ba 100%); border-radius: 3px; position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+          <div style="position: absolute; left: -2px; top: -3px; width: 12px; height: 12px; background-color: white; border: 3px solid #3e8ed0; border-radius: 50%;"></div>
+          <div style="position: absolute; right: -2px; top: -3px; width: 12px; height: 12px; background-color: white; border: 3px solid #9953ba; border-radius: 50%;"></div>
+        </div>
+      </div>
+
+      <div class="has-text-centered" style="width: 160px;">
+        <span class="icon is-large" style="color: #9953ba; margin-bottom: 0.5rem;"><i class="fas fa-users fa-2x"></i></span>
+        <p class="has-text-weight-bold is-size-5" style="color: #9953ba;">Generalization</p>
+        <p class="is-size-7 has-text-grey">Subject-Independent</p>
+      </div>
+      
+    </div>
+
+
+    <div class="columns is-variable is-6">
+      
+      <div class="column is-half">
+        <div class="box" style="height: 100%; border-top: 5px solid #3e8ed0;">
+          <h3 class="title is-4" style="color: #3e8ed0;">Subject-Dependent (SD)</h3>
+          <p class="subtitle is-6 has-text-grey" style="margin-bottom: 1rem;">Personalized Modeling &bull; <strong>Emotion Tasks Only</strong></p>
+          
+          <div class="content is-size-6">
+            <p style="margin-bottom: 1rem;">
+              Designed for personalized applications (e.g., in-home elderly care systems). To preserve the temporal dynamics of elicited emotional responses, a <strong>Chronological Split</strong> is applied within each trial.
+            </p>
+          </div>
+
+          <p class="is-size-7 has-text-weight-bold" style="margin-bottom: 0.5rem; color: #4a5568;">Chronological Split per Trial:</p>
+          <div class="is-flex has-text-centered has-text-weight-bold is-size-7" style="height: 40px; border-radius: 6px; overflow: hidden; margin-bottom: 1rem;">
+            <div style="width: 60%; background-color: #3e8ed0; color: white; display: flex; align-items: center; justify-content: center;">
+              Train (First 60%)
+            </div>
+            <div style="width: 20%; background-color: #ffe08a; color: #8a6d3b; display: flex; align-items: center; justify-content: center;">
+              Val (20%)
+            </div>
+            <div style="width: 20%; background-color: #48c774; color: white; display: flex; align-items: center; justify-content: center;">
+              Test (20%)
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="box" style="height: 100%; border-top: 5px solid #9953ba;">
+          <h3 class="title is-4" style="color: #9953ba;">Subject-Independent (SI)</h3>
+          <p class="subtitle is-6 has-text-grey" style="margin-bottom: 1rem;">Generalization &bull; <strong>Emotion & Cognition Tasks</strong></p>
+          
+          <div class="content is-size-6">
+            <p style="margin-bottom: 1rem;">
+              Designed to evaluate model generalization across unseen participants. This is strictly required for cognition screening (MCI vs. HC) to ensure valid real-world applicability.
+            </p>
+          </div>
+
+          <p class="is-size-7 has-text-weight-bold" style="margin-bottom: 0.5rem; color: #4a5568;">Subject-wise 5-Fold Cross-Validation:</p>
+          
+          <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 1rem;">
+            <div class="is-flex" style="height: 20px; border-radius: 3px; overflow: hidden;">
+              <div style="width: 20%; background-color: #f14668;" title="Test"></div>
+              <div style="width: 80%; background-color: #e4e4e4;" title="Train"></div>
+            </div>
+            <div class="is-flex" style="height: 20px; border-radius: 3px; overflow: hidden;">
+              <div style="width: 20%; background-color: #e4e4e4;" title="Train"></div>
+              <div style="width: 20%; background-color: #f14668;" title="Test"></div>
+              <div style="width: 60%; background-color: #e4e4e4;" title="Train"></div>
+            </div>
+            <div class="is-flex" style="height: 20px; border-radius: 3px; overflow: hidden;">
+              <div style="width: 40%; background-color: #e4e4e4;" title="Train"></div>
+              <div style="width: 20%; background-color: #f14668;" title="Test"></div>
+              <div style="width: 40%; background-color: #e4e4e4;" title="Train"></div>
+            </div>
+            <div class="is-flex" style="height: 20px; border-radius: 3px; overflow: hidden;">
+              <div style="width: 60%; background-color: #e4e4e4;" title="Train"></div>
+              <div style="width: 20%; background-color: #f14668;" title="Test"></div>
+              <div style="width: 20%; background-color: #e4e4e4;" title="Train"></div>
+            </div>
+            <div class="is-flex" style="height: 20px; border-radius: 3px; overflow: hidden;">
+              <div style="width: 80%; background-color: #e4e4e4;" title="Train"></div>
+              <div style="width: 20%; background-color: #f14668;" title="Test"></div>
+            </div>
+          </div>
+          
+          <div class="is-flex is-justify-content-center is-align-items-center is-size-7 has-text-grey">
+            <span style="display: inline-block; width: 12px; height: 12px; background-color: #e4e4e4; margin-right: 5px; border-radius: 2px;"></span> Train (~80%)
+            <span style="display: inline-block; width: 12px; height: 12px; background-color: #f14668; margin-right: 5px; margin-left: 15px; border-radius: 2px;"></span> Test (~20%)
+          </div>
+
+          <div id="fold-distribution-placeholder" style="margin-top: 1rem;">
+            </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="applications" style="background-color: #ffffff; padding-top: 3rem; padding-bottom: 4rem;">
+  <div class="container is-max-desktop">
+    
+    <div class="has-text-centered" style="margin-bottom: 3rem;">
+      <h2 class="title is-3" style="color: #2c3e50;">POTENTIAL APPLICATIONS</h2>
+      <p class="is-size-6 has-text-grey" style="margin-top: 10px;">Unlocking new frontiers in scientific discovery and clinical deployment.</p>
+    </div>
+
+    <div class="columns is-multiline">
+      
+      <div class="column is-6">
+        <div class="card" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: 100%; display: flex; flex-direction: column;">
+          
+          <div style="padding: 1.5rem 1rem 1rem; text-align: center;">
+            <p class="title is-5" style="color: #3273dc; margin-bottom: 0;">Emotion-Cognition Synergy</p>
+          </div>
+
+          <div class="card-image" style="background-color: #fff9f0; position: relative; padding-top: 35%; width: 100%;"> 
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; padding: 10px;">
+              <img src="static/images/app_synergy.png" alt="Emotion-Cognition Synergy" 
+                   style="max-height: 100%; width: auto; object-fit: contain;">
+            </div>
+          </div>
+
+          <div class="card-content" style="padding: 1.2rem; flex-grow: 1; display: flex; align-items: center;">
+            <p class="subtitle is-6 has-text-grey has-text-centered" style="line-height: 1.5; margin: 0; width: 100%;">
+              Uncover the behavioral and neural links between affective states and cognitive decline.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="column is-6">
+        <div class="card" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: 100%; display: flex; flex-direction: column;">
+          
+          <div style="padding: 1.5rem 1rem 1rem; text-align: center;">
+            <p class="title is-5" style="color: #9b51e0; margin-bottom: 0;">Multimodal Foundation Models</p>
+          </div>
+
+          <div class="card-image" style="background-color: #f5f3ff; position: relative; padding-top: 35%; width: 100%;"> 
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; padding: 10px;">
+              <img src="static/images/app_foundation.png" alt="Foundation Models" 
+                   style="max-height: 100%; width: auto; object-fit: contain;">
+            </div>
+          </div>
+
+          <div class="card-content" style="padding: 1.2rem; flex-grow: 1; display: flex; align-items: center;">
+            <p class="subtitle is-6 has-text-grey has-text-centered" style="line-height: 1.5; margin: 0; width: 100%;">
+              Enable self-supervised learning for large-scale affective models tuned for the elderly.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="column is-6">
+        <div class="card" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: 100%; display: flex; flex-direction: column;">
+          
+          <div style="padding: 1.5rem 1rem 1rem; text-align: center;">
+            <p class="title is-5" style="color: #00d1b2; margin-bottom: 0;">Personalized In-Home Monitoring</p>
+          </div>
+
+          <div class="card-image" style="background-color: #e6fcf5; position: relative; padding-top: 35%; width: 100%;"> 
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; padding: 10px;">
+              <img src="static/images/app_monitoring.png" alt="In-Home Monitoring" 
+                   style="max-height: 100%; width: auto; object-fit: contain;">
+            </div>
+          </div>
+
+          <div class="card-content" style="padding: 1.2rem; flex-grow: 1; display: flex; align-items: center;">
+            <p class="subtitle is-6 has-text-grey has-text-centered" style="line-height: 1.5; margin: 0; width: 100%;">
+              Design unobtrusive, subject-dependent systems for continuous emotional well-being tracking.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="column is-6">
+        <div class="card" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: 100%; display: flex; flex-direction: column;">
+          
+          <div style="padding: 1.5rem 1rem 1rem; text-align: center;">
+            <p class="title is-5" style="color: #e6b800; margin-bottom: 0;">Community MCI Screening</p>
+          </div>
+
+          <div class="card-image" style="background-color: #fff9db; position: relative; padding-top: 35%; width: 100%;"> 
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; padding: 10px;">
+              <img src="static/images/app_screening.png" alt="MCI Screening" 
+                   style="max-height: 100%; width: auto; object-fit: contain;">
+            </div>
+          </div>
+
+          <div class="card-content" style="padding: 1.2rem; flex-grow: 1; display: flex; align-items: center;">
+            <p class="subtitle is-6 has-text-grey has-text-centered" style="line-height: 1.5; margin: 0; width: 100%;">
+              Deploy scalable, subject-independent tools for early diagnosis and intervention.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="data-access" style="background-color: #f8f9fa; padding-top: 4rem; padding-bottom: 5rem;">
+  <div class="container is-max-desktop">
+    
+    <div class="has-text-centered" style="margin-bottom: 3rem;">
+      <h2 class="title is-3" style="color: #2c3e50;">DATA ACCESS</h2>
+      <p class="is-size-6 has-text-grey" style="margin-top: 10px;">Get started with the MECO dataset for your research.</p>
+    </div>
+
+    <article class="message is-warning" style="box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+      <div class="message-body" style="border-left-width: 5px; color: #5c460a;">
+        <span class="icon is-medium" style="color: #e6b800; margin-right: 5px; vertical-align: middle;">
+          <i class="fas fa-shield-alt fa-lg"></i>
+        </span>
+        <strong>Ethics & Privacy Statement:</strong> In compliance with the informed consent signed by the elderly participants and IRB regulations, raw data will NOT be publicly released to protect participant privacy. We provide pre-processed and aligned multimodal features for use in all downstream tasks.
+      </div>
+    </article>
+
+    <div class="columns is-multiline" style="margin-top: 1.5rem;">
+      
+      <div class="column is-12">
+        <div class="box" style="border-left: 5px solid #3273dc; border-radius: 8px;">
+          <div class="is-flex is-align-items-center" style="margin-bottom: 1rem;">
+            <span class="tag is-info is-medium is-rounded has-text-weight-bold" style="margin-right: 15px;">Step 1</span>
+            <h3 class="title is-4" style="margin-bottom: 0; color: #2c3e50;">Download Encrypted Features</h3>
+          </div>
+          <p class="is-size-6 has-text-grey" style="margin-bottom: 1.5rem; padding-left: 65px;">
+            The extracted multimodal feature files are hosted on Baidu Netdisk in an encrypted archive. Please download the files first.
+          </p>
+          <div style="padding-left: 65px;">
+            <a href="https://pan.baidu.com/s/1K7ZkEpt4iseMhsqVE8fiQQ?pwd=b3yj" target="_blank" class="button is-link is-outlined is-medium" style="margin-right: 15px; border-width: 2px;">
+              <span class="icon"><i class="fas fa-cloud-download-alt"></i></span>
+              <span>Baidu Netdisk (Pan)</span>
+            </a>
+            <span class="has-text-weight-bold is-size-5" style="color: #e74c3c; vertical-align: middle;">
+              Extraction Code: <code>b3yj</code>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-12">
+        <div class="box" style="border-left: 5px solid #48c774; border-radius: 8px;">
+          <div class="is-flex is-align-items-center" style="margin-bottom: 1rem;">
+            <span class="tag is-success is-medium is-rounded has-text-weight-bold" style="margin-right: 15px;">Step 2</span>
+            <h3 class="title is-4" style="margin-bottom: 0; color: #2c3e50;">Request Decryption Key</h3>
+          </div>
+          <p class="is-size-6 has-text-grey" style="margin-bottom: 1.5rem; padding-left: 65px;">
+            To obtain the password to unzip the dataset, please send a formal request from your <strong>institutional email</strong> to 
+            <a href="mailto:hongbinchen@stu.njmu.edu.cn" class="has-text-weight-bold" style="color: #3273dc;">hongbinchen@stu.njmu.edu.cn</a>. 
+            Please use the following template:
+          </p>
+          
+          <div style="padding-left: 65px;">
+            <div class="control">
+              <pre style="background-color: #f5f5f5; border-radius: 6px; padding: 1.5rem; font-size: 0.9rem; line-height: 1.6; border: 1px solid #dbdbdb;"><code>Subject: Data Access Request for MECO Dataset
+
+Dear MECO Dataset Team,
+
+I am writing to request the decryption password for the MECO dataset. I agree to use the data strictly for academic research purposes and will not distribute it to any third parties without permission.
+
+- Full Name: [Your Name]
+- Institution / Affiliation: [Your University / Research Center]
+- Position / Title: [e.g., Master Student, PhD Student, Professor]
+- Intended Purpose of Use: [Briefly describe your research project, e.g., multimodal emotion recognition]
+
+I confirm that I have read the ethics and privacy statement, and I commit to citing your paper if this dataset is used in my publications.
+
+Best regards,
+[Your Name]</code></pre>
+            </div>
+            <p class="is-size-7 has-text-grey" style="margin-top: 10px;">
+              <em>* Applications will typically be reviewed and processed within 1-2 business days.</em>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- citation
+
+<section class="section" id="citation" style="padding-top: 3rem; padding-bottom: 5rem;">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered" style="color: #2c3e50; margin-bottom: 2rem;">CITATION</h2>
+    <p class="is-size-6 has-text-grey has-text-centered" style="margin-bottom: 2rem;">
+      If you find the MECO useful for your research, please cite our work:
+    </p>
+    
+    <div class="box" style="background-color: #f5f5f5; border: 1px solid #dbdbdb; position: relative;">
+      <button class="button is-small is-light" style="position: absolute; top: 10px; right: 10px;" onclick="copyCitation()">
+        <span class="icon is-small"><i class="fas fa-copy"></i></span>
+        <span>Copy</span>
+      </button>
+      
+      <pre style="background-color: transparent; border: none; padding: 0; font-size: 0.9rem; line-height: 1.5;"><code id="bibtex-code">@article{chen_meco2026,
+  title={MECO: A Multimodal Dataset for Emotion Recognition and Cognitive Impairment Screening in Older Adults},
+  author={Chen, Hongbin and others},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2026}
+}</code></pre>
+    </div>
+  </div>
+</section> -->
+
+<script>
+function copyCitation() {
+  const code = document.getElementById('bibtex-code').innerText;
+  navigator.clipboard.writeText(code).then(() => {
+    alert('Citation copied to clipboard!');
+  });
+}
+</script>
 
 
 
@@ -329,6 +938,31 @@
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 获取所有的 navbar-burger 元素
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    // 检查是否有 burger 元素
+    if ($navbarBurgers.length > 0)毛) {
+      // 遍历它们
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          // 获取 data-target 属性的值
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          // 切换 is-active 类，控制菜单显示与隐藏
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    }
+  });
+</script>
+
 
   </body>
   </html>
